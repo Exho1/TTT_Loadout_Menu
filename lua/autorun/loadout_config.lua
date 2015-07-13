@@ -1,57 +1,65 @@
-AddCSLuaFile()
----- TTT Weapon Loadouts Configuration ----
+----// TTT Loadout Menu //----
 -- Author: Exho
-WL_dat = "8/18/14"
-WL_ver = 1.2
 
------- CONFIGURATION ------
--- Blacklist
--- Usergroups that are unable to use the loadout menu, "user" or "admin" for example. Leave empty if not used
-WL_Blacklist 	= {}
-WL_Deny_MSG 	= "Your group cannot use the loadout menu! Sorry :(" -- Blacklist deny message (if used)
+AddCSLuaFile()
 
--- Loadout panel stuff
-WL_Panel_Header 	= Color(34, 42, 60) -- Where it says "Primary", "Secondary", and "Grenade"
-WL_Panel_Content 	= Color(44, 62, 80) -- Where the gun icons are located
-WL_Panel_Body		= Color(0, 0, 10, 230) -- The actual panel background. Alpha is used in this one only
-WL_Panel_Category	= Color(255, 255, 255) -- Category name color
-WL_Panel_Title		= "Weapon Loadout Menu" -- Title of the panel
+loadout = {}
+loadout.version = "7/12/15"
 
-WL_ChatOpen			= "!loadout"  -- Opens the Loadout panel
-WL_Panel_Key		= KEY_F6 -- Not used at the moment, soon....
+-- Usergroups that are allowed to use the loadout menu, if you want all usergroups to be able to use it then leave the table empty/blank
+loadout.whitelist = {}
+loadout.denyMsg = "Your usergroup is unable to use the loadout menu!"
 
--- Primary
-WL_WEAPON_1 	= "weapon_ttt_m16" -- Gun class 
-WL_WEAPON_2 	= "weapon_zm_shotgun" 
-WL_WEAPON_3		= "weapon_zm_sledge"
-WL_WEAPON_4		= "weapon_zm_mac10"
-WL_WEAPON_5		= "weapon_zm_rifle"
--- Secondary
-WL_WEAPON_6		= "weapon_zm_pistol"
-WL_WEAPON_7		= "weapon_ttt_glock"
-WL_WEAPON_8		= "weapon_zm_revolver"
--- Grenades
-WL_WEAPON_9		= "weapon_zm_molotov"
-WL_WEAPON_10	= "weapon_ttt_confgrenade"
-WL_WEAPON_11	= "weapon_ttt_smokegrenade"
+loadout.chatCommand = "!loadout"
+loadout.keyBind = KEY_F6
 
--- The icons that the grenades currently use as I dont have one. Easily replaceable if you make your own
-WL_ICON_INCEN = "vgui/ttt/icon_nades.vtf"
-WL_ICON_SMOKE = "vgui/ttt/icon_nades.vtf"
-WL_ICON_DISCOM = "vgui/ttt/icon_nades.vtf"
+-- Primary weapons. Format: Name = Class
+loadout.primary = {
+	["M16"] = "weapon_ttt_m16",
+	["Shotgun"] = "weapon_zm_shotgun",
+	["HUGE"] = "weapon_zm_sledge",
+	["Mac10"] = "weapon_zm_mac10",
+	["Scout"] = "weapon_zm_rifle",
+}
 
-WL_WEPNAMES = {} -- Weapon names, used for tool tips and telling people what their loadout consists of
--- The perks of using variables is that these names are tied to the classes
-WL_WEPNAMES[WL_WEAPON_1] = "a M16" 
-WL_WEPNAMES[WL_WEAPON_2] = "a Shotgun"
-WL_WEPNAMES[WL_WEAPON_3] = "a HUGE"
-WL_WEPNAMES[WL_WEAPON_4] = "a Mac10"
-WL_WEPNAMES[WL_WEAPON_5] = "a Rifle"
-WL_WEPNAMES[WL_WEAPON_6] = "a Pistol"
-WL_WEPNAMES[WL_WEAPON_7] = "a Glock"
-WL_WEPNAMES[WL_WEAPON_8] = "a Deagle"
-WL_WEPNAMES[WL_WEAPON_9] = "a Incendinary Grenade"
-WL_WEPNAMES[WL_WEAPON_10] = "a Discombobulator"
-WL_WEPNAMES[WL_WEAPON_11] = "a Smoke Grenade"
+-- Secondary weapons. Format: Name = Class
+loadout.secondary = {
+	["Five Seven"] = "weapon_zm_pistol",
+	["Glock"] = "weapon_ttt_glock",
+	["Deagle"] = "weapon_zm_revolver",
+}
 
+-- Extra weapons. Format: Name = Class
+loadout.grenades = {
+	["Incendinary"] = "weapon_zm_molotov",
+	["Discombobulator"] = "weapon_ttt_confgrenade",
+	["Smoke"] = "weapon_ttt_smokegrenade",
+}
+
+-- Weapon icons. Format: Class = Path to material
+loadout.icons = {
+	["weapon_ttt_m16"] = "vgui/ttt/icon_m16",
+	["weapon_zm_shotgun"] = "vgui/ttt/icon_shotgun",
+	["weapon_zm_sledge"] = "vgui/ttt/icon_m249",
+	["weapon_zm_mac10"] = "vgui/ttt/icon_mac",
+	["weapon_zm_rifle"] = "vgui/ttt/icon_scout",
+	["weapon_zm_pistol"] = "vgui/ttt/icon_pistol",
+	["weapon_ttt_glock"] = "vgui/ttt/icon_glock",
+	["weapon_zm_revolver"] = "vgui/ttt/icon_deagle",
+}
+
+local plymeta = FindMetaTable( "Player" )
+
+--// Shared meta function 
+function plymeta:canUseLoadout() 
+	if #loadout.whitelist == 0 then return true end -- No groups on the whitelist
+	
+	local curgroup = self:GetUserGroup()
+	for k, group in pairs(loadout.whitelist) do
+		if string.lower(curgroup) == string.lower(group) then
+			return true
+		end
+	end
+	return false
+end
 
