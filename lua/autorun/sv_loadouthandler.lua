@@ -24,22 +24,28 @@ if SERVER then -- Our serverside stuff
 	hook.Add( "TTTBeginRound", "loadout_distribute", function()
 		for k, ply in pairs( player.GetAll() ) do 
 			-- Checks if the player has loadouts enabled
-			if ply:GetPData("TTTLoadoutOn", "false") == "true" then 
+			if ply:GetPData("TTTLoadoutOn", "false") == "true" and IsValid(ply) and ply:IsTerror() and not ply:IsSpec() and ply:canUseLoadout() then 
 				-- Grab the loadouts from PData
 				local p = ply:GetPData("TTTPrimary", "")
 				local s = ply:GetPData("TTTSecondary", "")
 				local g = ply:GetPData("TTTGrenade", "")
-				
-				-- The 3 commandments of loadouts
-				if ply:IsSpec() or not ply:Alive() then return end -- Only give to the living
-				if not ply:canUseLoadout() then return end -- Only give to those worthy
-				if p == "" and s == "" and g == "" then return end -- Only give to those who want it
-				
+			
 				print(ply:Nick().." has been given a loadout!")
-				
-				ply:Give( p )
-				ply:Give( s )
-				ply:Give( g )
+					
+				for _, wep in pairs(ply:GetWeapons()) do
+					if wep.Kind == WEAPON_HEAVY and p then
+						ply:StripWeapon(wep:GetClass())
+						ply:Give( p )
+					end
+					if wep.Kind == WEAPON_PISTOL and s then
+						ply:StripWeapon(wep:GetClass())
+						ply:Give( s )
+					end
+					if wep.Kind == WEAPON_NADE and g then
+						ply:StripWeapon(wep:GetClass())
+						ply:Give( g )
+					end
+				end
 				
 				net.Start("loadout_received")
 				net.Send(ply)
