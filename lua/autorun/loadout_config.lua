@@ -1,5 +1,6 @@
 ----// TTT Loadout Menu //----
 -- Author: Exho
+-- Modified by: RIPD
 
 AddCSLuaFile()
 

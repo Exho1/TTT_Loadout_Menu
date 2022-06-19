@@ -1,0 +1,12 @@
+{
+	"title"		:	"TTT - Loadout Menu for Weapon Packs",
+	"type"		:	"ServerContent",
+	"tags"		:	[ "roleplay", "fun" ],
+	"ignore"	:
+	[
+		"*.git*",
+		"demo_images/*",
+		"README.md"
+		"icon.jpg"
+	]
+}
