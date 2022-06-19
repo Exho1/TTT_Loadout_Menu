@@ -5,7 +5,7 @@ Created by Exho on August 15th, 2014 and initially coded in 2 hours. Its my clon
 Almost entirely rewritten on 7/12/15 to just work better. Added scrollers for more weapons as well as reducing boilerplate code on the client and improving the serverside code as well.
 
 
-Modified loadout_config.lua to also Show Weapons from the follwoing collections:
+Modified loadout_config.lua to also Show Weapons from the follwoing addons:
 
 [TTT Rifle Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=307400737)
 
@@ -13,7 +13,7 @@ Modified loadout_config.lua to also Show Weapons from the follwoing collections:
 
 [TTT Assault Pack 2](https://steamcommunity.com/sharedfiles/filedetails/?id=316433211)
 
-[TTT Rifle Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=307400737)
+[TTT Shotgun Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=307345118)
 
 [TTT Pistol Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=307401169)
 

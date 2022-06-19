@@ -6,7 +6,7 @@
 	[
 		"*.git*",
 		"demo_images/*",
-		"README.md"
+		"*.md"
 		"icon.jpg"
 	]
 }
