@@ -1,4 +1,4 @@
-Original by [url=store.steampowered.com]Exho[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=301839781]Original[/url] by [url=https://steamcommunity.com/profiles/76561198066930384]Exho[/url]
 
 Modified loadout_config.lua to also show Weapons from the follwoing addons:
 
@@ -14,7 +14,7 @@ Modified loadout_config.lua to also show Weapons from the follwoing addons:
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=307401169] TTT Pistol Pack[/url]
 [/list]
 
-For correct use all previously mentioned addons are required. These can be downloaded [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2823275528]HERE[/url] as a collection. CS.S is required for the hands.
+For correct use all previously mentioned Addons are required. These can be downloaded [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2823275528]HERE[/url] as a collection. CS:S is required for the hands.
 
 [h1]USAGE[/h1]
 Open  loadout menu:
@@ -48,7 +48,6 @@ Print current loadout:
 
 
 [hr][/hr]
-
 
 [b]Original description[/b]
 
