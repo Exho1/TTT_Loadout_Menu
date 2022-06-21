@@ -1,6 +1,6 @@
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=301839781]Original[/url] by [url=https://steamcommunity.com/profiles/76561198066930384]Exho[/url]
 
-Modified loadout_config.lua to also show Weapons from the follwoing addons:
+Modified loadout_config.lua to also show weapons from the follwoing addons:
 
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=307400737] TTT Rifle Pack[/url]
@@ -17,7 +17,7 @@ Modified loadout_config.lua to also show Weapons from the follwoing addons:
 For correct use all previously mentioned Addons are required. These can be downloaded [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2823275528]HERE[/url] as a collection. CS:S is required for the hands.
 
 [h1]USAGE[/h1]
-Open  loadout menu:
+Open loadout menu:
 
 [table]
     [tr]
@@ -55,7 +55,7 @@ Print current loadout:
 Finding weapons takes too much effort!
 
 *** Info:
-My take on the popular Coderhire addon because recreating Coderhire stuff is fun and its always nice to have a free alternative! Basically it works by typing a chat command to open the menu, selecting which guns you want, and hitting "Submit" and bam! Now you have a loadout that you recieve at the start of each round. Loadouts can be configured to work only for certain usergroups so you could make it donator only. You can also disable your loadouts by hiting the Disable button in the panel.
+My take on the popular Coderhire addon because recreating Coderhire stuff is fun and it's always nice to have a free alternative! Basically it works by typing a chat command to open the menu, selecting which guns you want, and hitting "Submit" and bam! Now you have a loadout that you recieve at the start of each round. Loadouts can be configured to work only for certain usergroups so you could make it donator only. You can also disable your loadouts by hitting the "Disable" button in the panel.
 
 *** Config:
 * Chat - !Loadout - Opens the loadout menu if you are in the correct group!
@@ -65,4 +65,4 @@ My take on the popular Coderhire addon because recreating Coderhire stuff is fun
 
 Github: https://github.com/Exho1/TTT_Loadout_Menu
 
-If you have any errors or problems, I am willing to help as long as you are respectful and specific with your issue.
+If you have any errors or problems, i'm willing to help as long as you are respectful and specific with your issue.
