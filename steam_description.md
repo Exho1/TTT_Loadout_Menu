@@ -53,7 +53,7 @@ Print current loadout:
 [b]Original description[/b]
 
 
-Finding weapons takes to much effort!
+Finding weapons takes too much effort!
 
 *** Info:
 My take on the popular Coderhire addon because recreating Coderhire stuff is fun and it's always nice to have a free alternative! Basically it works by typing a chat command to open the menu, selecting which guns you want, and hitting "Submit" and bam! Now you have a loadout that you recieve at the start of each round. Loadouts can be configured to work only for certain usergroups so you could make it donator only. You can also disable your loadouts by hitting the "Disable" button in the panel.
