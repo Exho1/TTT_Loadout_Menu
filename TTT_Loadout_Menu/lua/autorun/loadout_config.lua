@@ -50,7 +50,10 @@ loadout.grenades = {
 
 -- Weapon icons. Format: Class = Path to material
 loadout.icons = {
-	["weapon_ttt_m16"] = "vgui/ttt/icon_m16",
+	["weapon_zm_molotov"] = "vgui/ttt/ripd/icon_incendeary", --grenade icons
+	["weapon_ttt_confgrenade"] = "vgui/ttt/ripd/icon_discombulator",
+	["weapon_ttt_smokegrenade"] = "vgui/ttt/ripd/icon_smoke",
+	["weapon_ttt_m16"] = "vgui/ttt/icon_m16", -- Defautl iocns
 	["weapon_zm_shotgun"] = "vgui/ttt/icon_shotgun",
 	["weapon_zm_sledge"] = "vgui/ttt/icon_m249",
 	["weapon_zm_mac10"] = "vgui/ttt/icon_mac",
