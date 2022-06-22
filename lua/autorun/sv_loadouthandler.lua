@@ -40,6 +40,29 @@ if SERVER then -- Our serverside stuff
 				ply:Give( p )
 				ply:Give( s )
 				ply:Give( g )
+
+				if p == "weapon_zm_shotgun" then ply:SetAmmo(24, "Buckshot", false ) end
+				if p == "weapon_zm_mac10" then ply:SetAmmo(60, "SMG1", false ) end
+				if p == "weapon_zm_sledge" then ply:SetAmmo(0, "AirboatGun", false ) end
+				if p == "weapon_ttt_m16" then ply:SetAmmo(60, "Pistol", false ) end
+				if p == "weapon_zm_rifle" then ply:SetAmmo(20, "357", false ) end
+
+				if p == "weapon_ap_mrca1" then ply:SetAmmo(60, "SMG1", false ) end
+				if p == "weapon_ap_tec9" then ply:SetAmmo(60, "SMG1", false ) end
+				if p == "weapon_ap_vector" then ply:SetAmmo(60, "SMG1", false ) end
+				if p == "weapon_ap_hbadger" then ply:SetAmmo(60, "SMG1", false ) end
+				if p == "weapon_ap_pp19" then ply:SetAmmo(60, "SMG1", false ) end
+				if p == "weapon_pp_rbull" then ply:SetAmmo(36, "AlyxGun", false ) end
+				if p == "weapon_pp_remington" then ply:SetAmmo(36, "AlyxGun", false ) end
+				if p == "weapon_rp_pocket" then ply:SetAmmo(20, "357", false ) end
+				if p == "weapon_sp_dbarrel" then ply:SetAmmo(24, "Buckshot", false ) end
+				if p == "weapon_sp_striker" then ply:SetAmmo(24, "Buckshot", false ) end
+				if p == "weapon_sp_winchester" then ply:SetAmmo(24, "Buckshot", false ) end
+				
+				
+				if s == "weapon_zm_revolver" then ply:SetAmmo (36, "AlyxGun", false) end 
+				if s == "weapon_ttt_glock" then ply:SetAmmo (60, "Pistol", false) end 
+				if s == "weapon_zm_pistol" then ply:SetAmmo (60, "Pistol", false) end
 				
 				net.Start("loadout_received")
 				net.Send(ply)
