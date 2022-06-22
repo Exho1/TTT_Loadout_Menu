@@ -52,14 +52,13 @@ if SERVER then -- Our serverside stuff
 				if p == "weapon_ap_vector" then ply:SetAmmo(60, "SMG1", false ) end
 				if p == "weapon_ap_hbadger" then ply:SetAmmo(60, "SMG1", false ) end
 				if p == "weapon_ap_pp19" then ply:SetAmmo(60, "SMG1", false ) end
-				if p == "weapon_pp_rbull" then ply:SetAmmo(36, "AlyxGun", false ) end
-				if p == "weapon_pp_remington" then ply:SetAmmo(36, "AlyxGun", false ) end
-				if p == "weapon_rp_pocket" then ply:SetAmmo(20, "357", false ) end
 				if p == "weapon_sp_dbarrel" then ply:SetAmmo(24, "Buckshot", false ) end
 				if p == "weapon_sp_striker" then ply:SetAmmo(24, "Buckshot", false ) end
 				if p == "weapon_sp_winchester" then ply:SetAmmo(24, "Buckshot", false ) end
-				
-				
+
+				if s == "weapon_pp_rbull" then ply:SetAmmo(36, "AlyxGun", false ) end
+				if s == "weapon_pp_remington" then ply:SetAmmo(36, "AlyxGun", false ) end
+				if s == "weapon_rp_pocket" then ply:SetAmmo(20, "357", false ) end
 				if s == "weapon_zm_revolver" then ply:SetAmmo (36, "AlyxGun", false) end 
 				if s == "weapon_ttt_glock" then ply:SetAmmo (60, "Pistol", false) end 
 				if s == "weapon_zm_pistol" then ply:SetAmmo (60, "Pistol", false) end
